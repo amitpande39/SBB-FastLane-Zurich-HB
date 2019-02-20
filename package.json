@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "SBBFastLane Automation Testing",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "protractor": "^5.4.2",
+    "jasmine-data-provider": "2.2.0",
+    "protractor-jasmine2-html-reporter": "0.0.7"
   },
-  "repository": {
-    "type": "git",
-    "url": "echo "https://github.com/amitpande39/SBB-FastLane-Zurich-HB.git"
+  "scripts": {
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update",
+    "webdriver-start": "./node_modules/.bin/webdriver-manager start",
+    "protractor": "./node_modules/.bin/protractor configuration.js",
+    "Start": "npm run webdriver-update && npm run webdriver-start && npm run protractor"
   }
 }
